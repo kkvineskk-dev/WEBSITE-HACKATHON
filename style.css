@@ -1,0 +1,157 @@
+/* General */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0077b6;
+  color: white;
+  padding: 1em 2em;
+}
+
+header .logo a {
+  color: white;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+header nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav a.highlight {
+  background: white;
+  color: #0077b6;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#modeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2em;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-image: url('https://i.ibb.co/fR4F8VH/Getty-Images-924518928.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero-content h1 span {
+  color: #90e0ef;
+}
+
+.hero-content .btn {
+  margin-right: 10px;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn.primary {
+  background: #0077b6;
+  color: white;
+}
+
+.btn.secondary {
+  background: white;
+  color: #0077b6;
+}
+
+/* FEATURES */
+.internship-section {
+  text-align: center;
+  padding: 60px 10%;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0077b6;
+  color: white;
+}
+body.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mode-toggle {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}

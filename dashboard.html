@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Experion Virtual Internship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #eef2f3, #8e9eab);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f4e04d;
+    }
+
+    .dashboard-container {
+      padding: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .welcome-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .welcome-section h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      color: #182848;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar {
+      background: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 10px;
+      margin: 10px 0 15px 0;
+    }
+
+    .progress-fill {
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      height: 100%;
+      width: 70%;
+      border-radius: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #182848, #4b6cb7);
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      background: #182848;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      animation: fadeIn 0.6s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Experion Dashboard</h1>
+    <nav>
+      <a href="internships.html">Internships</a>
+      <a href="submit.html">Submit Task</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <div class="dashboard-container">
+    <div class="welcome-section">
+      <h2>Welcome </h2>
+      <p>Your journey as a Virtual Intern starts here!</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Web Development Internship</h3>
+        <p>Task: Build a responsive landing page using HTML, CSS, and JS.</p>
+        <p>Status: <strong>In Progress</strong></p>
+        <div class="progress-bar"><div class="progress-fill" style="width:70%"></div></div>
+        <a href="submit.html" class="btn">Submit Task</a>
+      </div>
+
+      <div class="card">
+        <h3>Data Science Internship</h3>
+        <p>Task: Analyze internship data using Python and Pandas.</p>
+        <p>Status: <strong>Pending</strong></p>
+        <div class="progress-bar"><div class="progress-fill" style="width:30%"></div></div>
+        <a href="submit.html" class="btn">Start Task</a>
+      </div>
+
+      <div class="card">
+        <h3>AI & ML Internship</h3>
+        <p>Task: Train a model to predict user engagement trends.</p>
+        <p>Status: <strong>Completed</strong></p>
+        <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+        <a href="#" class="btn">View Report</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Experion Virtual Internship Platform 
+  </footer>
+
+</body>
+</html>

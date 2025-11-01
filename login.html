@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Experion Virtual Internships</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html">Experion</a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="internships.html">Internships</a>
+      <a href="login.html" class="active">Login</a>
+      <a href="signup.html" class="highlight">Sign Up</a>
+      <button id="modeToggle"></button>
+    </nav>
+  </header>
+
+  <!-- LOGIN FORM -->
+  <section class="form-container auth-form">
+    <h2>Login to Your Account</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit" class="btn">Login</button>
+      <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Experion. All rights reserved.</p>
+  </footer>
+
+  <!-- SIMPLE LOGIN LOGIC -->
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    if (loginForm) {
+      loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        if (email && password) {
+          // Simulate a successful login
+          localStorage.setItem("userEmail", email);
+          alert("Login successful! Redirecting to dashboard...");
+          window.location.href = "dashboard.html";
+        } else {
+          alert("Please enter valid credentials.");
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+

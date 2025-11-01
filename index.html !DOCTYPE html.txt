@@ -1,0 +1,1564 @@
+index.html <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experion | Virtual Internships</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><strong>Experion</strong></a>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="internships.html">Internships</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html" class="highlight">Sign Up</a>
+      <button id="modeToggle">🌙</button>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Boost Your Career with <span>Experion Internships</span></h1>
+      <p>Gain real-world experience and career-ready skills through virtual internships.</p>
+      <a href="internships.html" class="btn primary">Explore Internships</a>
+      <a href="signup.html" class="btn secondary">Get Started</a>
+    </div>
+  </section>
+
+  <!-- INTERNSHIP FEATURE SECTION -->
+  <section class="internship-section">
+    <h2>Why Our Internships Stand Out</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>💻 Hands-on Projects</h3>
+        <p>Work on real tasks that mirror industry challenges.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🌎 Learn Anywhere</h3>
+        <p>Participate from anywhere — all you need is a laptop and internet.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🏆 Certificates</h3>
+        <p>Earn verified certificates to showcase your achievements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Experion. All rights reserved.</p>
+  </footer>
+</body>
+</html> dashboard.html <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Experion Virtual Internship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #eef2f3, #8e9eab);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f4e04d;
+    }
+
+    .dashboard-container {
+      padding: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .welcome-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .welcome-section h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      color: #182848;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar {
+      background: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 10px;
+      margin: 10px 0 15px 0;
+    }
+
+    .progress-fill {
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      height: 100%;
+      width: 70%;
+      border-radius: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #182848, #4b6cb7);
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      background: #182848;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      animation: fadeIn 0.6s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Experion Dashboard</h1>
+    <nav>
+      <a href="internships.html">Internships</a>
+      <a href="submit.html">Submit Task</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <div class="dashboard-container">
+    <div class="welcome-section">
+      <h2>Welcome </h2>
+      <p>Your journey as a Virtual Intern starts here!</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Web Development Internship</h3>
+        <p>Task: Build a responsive landing page using HTML, CSS, and JS.</p>
+        <p>Status: <strong>In Progress</strong></p>
+        <div class="progress-bar"><div class="progress-fill" style="width:70%"></div></div>
+        <a href="submit.html" class="btn">Submit Task</a>
+      </div>
+
+      <div class="card">
+        <h3>Data Science Internship</h3>
+        <p>Task: Analyze internship data using Python and Pandas.</p>
+        <p>Status: <strong>Pending</strong></p>
+        <div class="progress-bar"><div class="progress-fill" style="width:30%"></div></div>
+        <a href="submit.html" class="btn">Start Task</a>
+      </div>
+
+      <div class="card">
+        <h3>AI & ML Internship</h3>
+        <p>Task: Train a model to predict user engagement trends.</p>
+        <p>Status: <strong>Completed</strong></p>
+        <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+        <a href="#" class="btn">View Report</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Experion Virtual Internship Platform 
+  </footer>
+
+</body>
+</html> submit.html <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Your Task - Experion Internships</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928DAB);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      width: 350px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    input, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+    }
+    button {
+      width: 100%;
+      background: #6C63FF;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #5848e4;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      margin-top: 15px;
+      display: inline-block;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Submit Your Internship Task</h2>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="text" placeholder="Internship Title" required>
+      <textarea rows="4" placeholder="Task Description or Submission Link..." required></textarea>
+      <button type="submit">Submit Task</button>
+    </form>
+    <a href="dashboard.html">⬅ Back to Dashboard</a>
+  </div>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("✅ Task submitted successfully! Great work, intern!");
+      window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+</html>    task.html <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Details | Experion Internship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #c3cfe2, #f5f7fa);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .task-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: #182848;
+      margin-bottom: 10px;
+    }
+
+    .task-desc {
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 25px;
+    }
+
+    .resources {
+      margin-bottom: 25px;
+    }
+
+    .resources a {
+      display: inline-block;
+      background: #4b6cb7;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .resources a:hover {
+      background: #182848;
+    }
+
+    .submit-btn {
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      color: white;
+      background: #182848;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Experion Internship Task</h1>
+    <a href="dashboard.html" style="color:white;text-decoration:none;">⬅ Back to Dashboard</a>
+  </header>
+
+  <div class="task-container">
+    <h2>Task: Build a Responsive Landing Page 🌐</h2>
+    <p class="task-desc">
+      Create a beautiful, mobile-friendly landing page using HTML, CSS, and JavaScript.
+      Make sure it adapts perfectly to all screen sizes and reflects a modern design.
+    </p>
+
+    <div class="resources">
+      <strong>📘 Resources:</strong><br><br>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML Docs</a>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS Guide</a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript Tutorials</a>
+    </div>
+
+    <button class="submit-btn" onclick="goToSubmit()">Submit Task</button>
+  </div>
+
+  <footer>© 2025 Experion Virtual Internship | Designed by Keshav 💼</footer>
+
+  <script>
+    function goToSubmit() {
+      alert("Great! You're ready to submit your work.");
+      window.location.href = "submit.html";
+    }
+  </script>
+</body>
+</html> internship.html <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internships | Experion Virtual Internship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f4e04d;
+    }
+
+    .internship-container {
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .internship-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .internship-header h2 {
+      font-size: 32px;
+      color: #182848;
+      margin-bottom: 10px;
+    }
+
+    .internship-header p {
+      color: #444;
+      font-size: 16px;
+    }
+
+    .internship-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #4b6cb7;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .card h3 {
+      color: #182848;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .skills {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .skills span {
+      background: #e0e7ff;
+      color: #4b6cb7;
+      padding: 4px 8px;
+      border-radius: 6px;
+      margin-right: 5px;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #182848, #4b6cb7);
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      background: #182848;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    /* Animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      animation: fadeUp 0.6s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Experion Internships</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="submit.html">Submit Task</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <div class="internship-container">
+    <div class="internship-header">
+      <h2>Explore Exciting Internships 🚀</h2>
+      <p>Choose an internship that matches your passion and skills. Each one offers real-world learning and hands-on experience.</p>
+    </div>
+
+    <div class="internship-grid">
+      <div class="card">
+        <span class="badge">Web Dev</span>
+        <h3>Frontend Development</h3>
+        <p>Build modern, responsive websites using HTML, CSS, and JavaScript. Learn how to design interactive UIs and improve UX.</p>
+        <div class="skills">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+        </div>
+        <a href="dashboard.html" class="btn">Apply Now</a>
+      </div>
+
+      <div class="card">
+        <span class="badge">AI/ML</span>
+        <h3>Artificial Intelligence Internship</h3>
+        <p>Work with neural networks, image recognition, and model training. Understand how AI powers modern applications.</p>
+        <div class="skills">
+          <span>Python</span><span>TensorFlow</span><span>Deep Learning</span>
+        </div>
+        <a href="dashboard.html" class="btn">Apply Now</a>
+      </div>
+
+      <div class="card">
+        <span class="badge">Data</span>
+        <h3>Data Science Internship</h3>
+        <p>Analyze data, build visualizations, and uncover insights using Python and Pandas. Learn how to tell stories with data.</p>
+        <div class="skills">
+          <span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Machine Learning</span>
+        </div>
+        <a href="dashboard.html" class="btn">Apply Now</a>
+      </div>
+
+      <div class="card">
+        <span class="badge">Cloud</span>
+        <h3>Cloud Computing Internship</h3>
+        <p>Get hands-on with AWS and Azure to deploy scalable cloud applications. Understand the fundamentals of cloud security.</p>
+        <div class="skills">
+          <span>AWS</span><span>Azure</span><span>Docker</span><span>DevOps</span>
+        </div>
+        <a href="dashboard.html" class="btn">Apply Now</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Experion Virtual Internship Platform | Designed by Keshav 💻
+  </footer>
+
+</body>
+</html>
+style.css /* General */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0077b6;
+  color: white;
+  padding: 1em 2em;
+}
+
+header .logo a {
+  color: white;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+header nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav a.highlight {
+  background: white;
+  color: #0077b6;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#modeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2em;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-image: url('https://i.ibb.co/fR4F8VH/Getty-Images-924518928.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero-content h1 span {
+  color: #90e0ef;
+}
+
+.hero-content .btn {
+  margin-right: 10px;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn.primary {
+  background: #0077b6;
+  color: white;
+}
+
+.btn.secondary {
+  background: white;
+  color: #0077b6;
+}
+
+/* FEATURES */
+.internship-section {
+  text-align: center;
+  padding: 60px 10%;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0077b6;
+  color: white;
+}
+script .js // Dark Mode Toggle
+const modeToggle = document.getElementById("modeToggle");
+if (modeToggle) {
+  modeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+  });
+}
+
+// Scroll Animation Trigger
+const fadeEls = document.querySelectorAll(".fade-in");
+window.addEventListener("scroll", () => {
+  fadeEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) el.classList.add("visible");
+  });
+});
+login.html <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Experion Virtual Internships</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html">Experion</a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="internships.html">Internships</a>
+      <a href="login.html" class="active">Login</a>
+      <a href="signup.html" class="highlight">Sign Up</a>
+      <button id="modeToggle"></button>
+    </nav>
+  </header>
+
+  <!-- LOGIN FORM -->
+  <section class="form-container auth-form">
+    <h2>Login to Your Account</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit" class="btn">Login</button>
+      <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Experion. All rights reserved.</p>
+  </footer>
+
+  <!-- SIMPLE LOGIN LOGIC -->
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    if (loginForm) {
+      loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        if (email && password) {
+          // Simulate a successful login
+          localStorage.setItem("userEmail", email);
+          alert("Login successful! Redirecting to dashboard...");
+          window.location.href = "dashboard.html";
+        } else {
+          alert("Please enter valid credentials.");
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+
+signup.html <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | Experion Virtual Internship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #4b6cb7, #182848);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .signup-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px 50px;
+      width: 350px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      animation: fadeUp 0.6s ease-in-out;
+    }
+
+    .signup-container h1 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .signup-container p {
+      text-align: center;
+      color: #ddd;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      margin-bottom: 15px;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    input::placeholder {
+      color: #ddd;
+    }
+
+    input:focus {
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 10px #fff;
+    }
+
+    button {
+      background: linear-gradient(90deg, #00b4d8, #0077b6);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      transform: scale(1.05);
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-link a {
+      color: #f4e04d;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      text-align: center;
+      width: 100%;
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 400px) {
+      .signup-container {
+        width: 90%;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h1>Create Your Account</h1>
+    <p>Join Experion Virtual Internships and start your journey 🚀</p>
+    
+    <form id="signupForm">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <div class="login-link">
+      Already have an account? <a href="login.html">Login</a>
+    </div>
+  </div>
+
+  <footer>© 2025 Experion Virtual Internship | Designed by Keshav 💼</footer>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Account created successfully! Redirecting to dashboard...');
+      window.location.href = "dashboard.html";
+    });
+  </script>
+</body>
+</html>
+internship.html <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internships | Experion Virtual Internship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f4e04d;
+    }
+
+    .internship-container {
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .internship-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .internship-header h2 {
+      font-size: 32px;
+      color: #182848;
+      margin-bottom: 10px;
+    }
+
+    .internship-header p {
+      color: #444;
+      font-size: 16px;
+    }
+
+    .internship-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #4b6cb7;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .card h3 {
+      color: #182848;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .skills {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .skills span {
+      background: #e0e7ff;
+      color: #4b6cb7;
+      padding: 4px 8px;
+      border-radius: 6px;
+      margin-right: 5px;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #182848, #4b6cb7);
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      background: #182848;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    /* Animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      animation: fadeUp 0.6s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Experion Internships</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="submit.html">Submit Task</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <div class="internship-container">
+    <div class="internship-header">
+      <h2>Explore Exciting Internships 🚀</h2>
+      <p>Choose an internship that matches your passion and skills. Each one offers real-world learning and hands-on experience.</p>
+    </div>
+
+    <div class="internship-grid">
+      <div class="card">
+        <span class="badge">Web Dev</span>
+        <h3>Frontend Development</h3>
+        <p>Build modern, responsive websites using HTML, CSS, and JavaScript. Learn how to design interactive UIs and improve UX.</p>
+        <div class="skills">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+        </div>
+        <a href="dashboard.html" class="btn">Apply Now</a>
+      </div>
+
+      <div class="card">
+        <span class="badge">AI/ML</span>
+        <h3>Artificial Intelligence Internship</h3>
+        <p>Work with neural networks, image recognition, and model training. Understand how AI powers modern applications.</p>
+        <div class="skills">
+          <span>Python</span><span>TensorFlow</span><span>Deep Learning</span>
+        </div>
+        <a href="dashboard.html" class="btn">Apply Now</a>
+      </div>
+
+      <div class="card">
+        <span class="badge">Data</span>
+        <h3>Data Science Internship</h3>
+        <p>Analyze data, build visualizations, and uncover insights using Python and Pandas. Learn how to tell stories with data.</p>
+        <div class="skills">
+          <span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Machine Learning</span>
+        </div>
+        <a href="dashboard.html" class="btn">Apply Now</a>
+      </div>
+
+      <div class="card">
+        <span class="badge">Cloud</span>
+        <h3>Cloud Computing Internship</h3>
+        <p>Get hands-on with AWS and Azure to deploy scalable cloud applications. Understand the fundamentals of cloud security.</p>
+        <div class="skills">
+          <span>AWS</span><span>Azure</span><span>Docker</span><span>DevOps</span>
+        </div>
+        <a href="dashboard.html" class="btn">Apply Now</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Experion Virtual Internship Platform | Designed by Keshav 💻
+  </footer>
+
+</body>
+</html>
+task.html <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Details | Experion Internship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #c3cfe2, #f5f7fa);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .task-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: #182848;
+      margin-bottom: 10px;
+    }
+
+    .task-desc {
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 25px;
+    }
+
+    .resources {
+      margin-bottom: 25px;
+    }
+
+    .resources a {
+      display: inline-block;
+      background: #4b6cb7;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .resources a:hover {
+      background: #182848;
+    }
+
+    .submit-btn {
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      color: white;
+      background: #182848;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Experion Internship Task</h1>
+    <a href="dashboard.html" style="color:white;text-decoration:none;">⬅ Back to Dashboard</a>
+  </header>
+
+  <div class="task-container">
+    <h2>Task: Build a Responsive Landing Page 🌐</h2>
+    <p class="task-desc">
+      Create a beautiful, mobile-friendly landing page using HTML, CSS, and JavaScript.
+      Make sure it adapts perfectly to all screen sizes and reflects a modern design.
+    </p>
+
+    <div class="resources">
+      <strong>📘 Resources:</strong><br><br>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML Docs</a>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS Guide</a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript Tutorials</a>
+    </div>
+
+    <button class="submit-btn" onclick="goToSubmit()">Submit Task</button>
+  </div>
+
+  <footer>© 2025 Experion Virtual Internship | Designed by Keshav 💼</footer>
+
+  <script>
+    function goToSubmit() {
+      alert("Great! You're ready to submit your work.");
+      window.location.href = "submit.html";
+    }
+  </script>
+</body>
+</html>
+submit.html <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Your Task - Experion Internships</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928DAB);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      width: 350px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    input, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+    }
+    button {
+      width: 100%;
+      background: #6C63FF;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #5848e4;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      margin-top: 15px;
+      display: inline-block;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Submit Your Internship Task</h2>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="text" placeholder="Internship Title" required>
+      <textarea rows="4" placeholder="Task Description or Submission Link..." required></textarea>
+      <button type="submit">Submit Task</button>
+    </form>
+    <a href="dashboard.html">⬅ Back to Dashboard</a>
+  </div>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("✅ Task submitted successfully! Great work, intern!");
+      window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+</html>
+login.html <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Experion Virtual Internships</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html">Experion</a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="internships.html">Internships</a>
+      <a href="login.html" class="active">Login</a>
+      <a href="signup.html" class="highlight">Sign Up</a>
+      <button id="modeToggle"></button>
+    </nav>
+  </header>
+
+  <!-- LOGIN FORM -->
+  <section class="form-container auth-form">
+    <h2>Login to Your Account</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit" class="btn">Login</button>
+      <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Experion. All rights reserved.</p>
+  </footer>
+
+  <!-- SIMPLE LOGIN LOGIC -->
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    if (loginForm) {
+      loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        if (email && password) {
+          // Simulate a successful login
+          localStorage.setItem("userEmail", email);
+          alert("Login successful! Redirecting to dashboard...");
+          window.location.href = "dashboard.html";
+        } else {
+          alert("Please enter valid credentials.");
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+
+this is my projectt 

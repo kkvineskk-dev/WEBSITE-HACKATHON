@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Experion Virtual Internships</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>Experion Dashboard</h1>
+    <nav>
+      <a href="internships.html">Internships</a>
+      <a href="submit.html">Submit Task</a>
+      <button id="logoutBtn" class="btn secondary">Logout</button>
+    </nav>
+  </header>
+
+  <!-- DASHBOARD CONTENT -->
+  <section class="dashboard">
+    <h2 id="welcomeText">Welcome to your Dashboard!</h2>
+
+    <div class="task-card">
+      <h3>Active Internship: Web Development Intern</h3>
+      <p><strong>Current Task:</strong> Build a responsive landing page</p>
+      <p><strong>Status:</strong> In Progress</p>
+      <a href="submit.html" class="btn primary">Submit Task</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Experion. All rights reserved.</p>
+  </footer>
+
+  <!-- DASHBOARD SCRIPT -->
+  <script>
+    // Get user info from localStorage
+    const userEmail = localStorage.getItem("userEmail");
+    const userName = localStorage.getItem("userName");
+
+    const welcomeText = document.getElementById("welcomeText");
+    if (userName) {
+      welcomeText.textContent = `Welcome, ${userName}!`;
+    } else if (userEmail) {
+      welcomeText.textContent = `Welcome, ${userEmail}!`;
+    }
+
+    // Logout button clears data and redirects
+    const logoutBtn = document.getElementById("logoutBtn");
+    logoutBtn.addEventListener("click", () => {
+      localStorage.clear();
+      alert("You have been logged out.");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
